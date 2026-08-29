@@ -47,6 +47,20 @@ function updateQty(productId, change) {
 
     qtySpan.innerText = currentQty;
 }
+// URL se category parh kar filter karne ka code
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get("category");
+    
+    if (categoryParam) {
+        categoryCheckboxes.forEach(checkbox => {
+            if (checkbox.value === categoryParam) {
+                checkbox.checked = true;
+            } else {
+                checkbox.checked = false;
+            }
+        });
+        filterAndSortProducts();
+    }
 document.addEventListener("DOMContentLoaded", () => {
     const priceSlider = document.querySelector("#priceRange"); // Aapke price slider ki id/class
     const priceOutput = document.querySelector("#maxPriceText"); // Jahan max price show ho raha hai
