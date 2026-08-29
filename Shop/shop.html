@@ -1,0 +1,471 @@
+<! DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Shop-SHOPZA</title>
+ <link rel="stylesheet" href="style.css">
+  <body>
+    <header>
+        <div id="header">
+        <div class="logo-container"> <img src="../Pictures/logo1.jpg" alt="" width="50px" height="50px">
+         <h3 id="logo-name">SHOPZA</h3>
+        </div>
+        <nav class="nav-bar">
+            <div class="nav-links">
+             <a href="../index.html">Home</a>
+<a href="shop.html">Shop</a>
+             
+              <!-- shop.html ke Navbar ka Dropdown -->
+<div class="dropdown">
+    <a href="#" class="dropbtn">Categories</a>
+    <div class="dropdown-content">
+    <a href="shop.html?category=women">Women Fashion</a>
+<a href="shop.html?category=men">Men Fashion</a>
+<a href="shop.html?category=electronics">Electronics</a>
+<a href="shop.html?category=home">Home and Living</a>
+<a href="shop.html?category=beauty">Beauty</a>
+<a href="shop.html?category=kids">Kids & Toys</a>
+</div>
+</div>
+             <a href="../about/about.html">About Us</a>
+<a href="../contact/contact.html">Contact Us</a>
+<a href="../cart/cart.html">Cart</a>
+             </div>
+</nav>
+        <div class="nav-actions">
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button type="button">🔍</button>
+        </div>
+        
+        
+    </div>
+    </header>
+    <br>
+
+    <section class="page-header">
+        <h2>All Products</h2>
+        <p>Explore our full collection across all categories</p>
+    </section>
+
+    <!-- Shop Content (Sidebar Filters + Products Grid) -->
+    <section class="shop-container">
+        
+        <!-- Sidebar Filter -->
+        <aside class="shop-sidebar">
+            <h3>Filter Products</h3>
+            
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <ul>
+                    <li><label><input type="checkbox" class="category-checkbox" value="all"> All Categories</label></li>
+                    <li><label><input type="checkbox" class="category-checkbox" value="women"> Women's Fashion</label></li>
+                    <li><label><input type="checkbox" class="category-checkbox" value="men"> Men's Fashion</label></li>
+                    <li><label><input type="checkbox" class="category-checkbox" value="electronics"> Electronics</label></li>
+                    <li><label><input type="checkbox" class="category-checkbox" value="homeliving"> Home & Living</label></li>
+                    <li><label><input type="checkbox" class="category-checkbox" value="beauty"> Beauty</label></li>
+                    <li><label><input type="checkbox" class="category-checkbox" value="kids"> Kids & Toys</label></li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <input type="range" id="priceRange" min="0" max="100000" value="100000">
+                <p>Max Price: <span id="priceValue">Rs.100000</span></p>
+            </div>
+        </aside>
+
+        <!-- Product Grid Section -->
+        <main class="shop-main">
+            <div class="shop-toolbar">
+                <p>Showing 1–6 of 12 results</p>
+                <select class="sort-dropdown" id="sortingSelect">
+                    <option value="default">Default Sorting</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                    <option value="rating">Sort by Rating</option>
+                </select>
+            </div>
+
+            <div class="products-container">
+                <!-- Product Card 1 -->
+                <div class="product-card" id="product-1" data-category="women" data-price="3000">
+                    <img src="../Pictures/women fashion.webp" alt="">
+                    <div class="product-info">
+                        <h3>Aesthetic Printed Lawn Shalwar Suit</h3>
+                        <p class="rating">★★★★☆ <span>(4.5)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.3,000</span>
+                            <span class="old-price">Rs.6,000</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-1')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-1', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-1', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 18 -->
+                <div class="product-card" id="product-18" data-category="electronics" data-price="95000">
+                    <img src="../Pictures/tv.jpg" alt="">
+                    <div class="product-info">
+                        <h3>43" Smart Full HD LED TV with NetTV & Built-in Apps</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.95,000</span>
+                            <span class="old-price">Rs.79,999</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-18')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-18', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-18', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card" id="product-2" data-category="men" data-price="4000">
+                    <img src="../Pictures/men jacket.jpg" alt="">
+                    <div class="product-info">
+                        <h3>Classic Slim-Fit Denim Jacket</h3>
+                        <p class="rating">★★★★★ <span>(5.0)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.4,000</span>
+                            <span class="old-price">Rs.6,500</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-2')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-2', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-2', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card" id="product-3" data-category="electronics" data-price="1499">
+                    <img src="../Pictures/headphone.jfif" alt="">
+                    <div class="product-info">
+                        <h3>SonicBass Noise-Canceling Headphones</h3>
+                        <p class="rating">★★★★☆ <span>(4.2)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.1,499</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-3')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-3', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-3', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card" id="product-4" data-category="beauty" data-price="999">
+                    <img src="../Pictures/serum.jfif" alt="">
+                    <div class="product-info">
+                        <h3>GlowBotanica Vitamin C Serum</h3>
+                        <p class="rating">★★★★☆ <span>(4.7)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.999</span>
+                            <span class="old-price">Rs.1,899</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-4')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-4', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-4', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="product-card" id="product-5" data-category="kids" data-price="3880">
+                    <img src="../Pictures/magnet toy.jpg" alt="">
+                    <div class="product-info">
+                        <h3>WonderBlocks Magnetic Building Set</h3>
+                        <p class="rating">★★★★★ <span>(4.7)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.3,880</span>
+                            <span class="old-price">Rs.4,850</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-5')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-5', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-5', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="product-card" id="product-6" data-category="homeliving" data-price="9990">
+                    <img src="../Pictures/bed.webp" alt="">
+                    <div class="product-info">
+                        <h3>RoyalVelvet Quilted King Bedspread Set</h3>
+                        <p class="rating">★★★★★ <span>(4.7)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.9,990</span>
+                            <span class="old-price">Rs.14,000</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-6')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-6', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-6', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="product-card" id="product-7" data-category="women" data-price="7999">
+                    <img src="../Pictures/sapphire1.webp" alt="">
+                    <div class="product-info">
+                        <h3>Women 3-Piece Stitched Embroidered Lawn Suit</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.7,999</span>
+                            <span class="old-price">Rs.5,500</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-7')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-7', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-7', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div class="product-card" id="product-8" data-category="women" data-price="8500">
+                    <img src="../Pictures/sapphire2.webp" alt="">
+                    <div class="product-info">
+                        <h3>Women 3-Piece Stitched Embroidered Lawn Suit (Sea Green)</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.8,500</span>
+                            <span class="old-price">Rs.6,200</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-8')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-8', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-8', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 9 -->
+                <div class="product-card" id="product-9" data-category="men" data-price="8500">
+                    <img src="../Pictures/men3.webp" alt="">
+                    <div class="product-info">
+                        <h3>Men's Black Kurta Shalwar & Textured Waistcoat Set</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.8,500</span>
+                            <span class="old-price">Rs.6,499</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-9')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-9', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-9', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 10 -->
+                <div class="product-card" id="product-10" data-category="men" data-price="7999">
+                    <img src="../Pictures/men4.jfif" alt="">
+                    <div class="product-info">
+                        <h3>Men's Royal Blue Kurta & Plain Waistcoat Suit</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.7,999</span>
+                            <span class="old-price">Rs.5,999</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-10')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-10', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-10', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 11 -->
+                <div class="product-card" id="product-11" data-category="homeliving" data-price="6999">
+                    <img src="../Pictures/kitchen.png" alt="">
+                    <div class="product-info">
+                        <h3>Premium Stainless Steel & Wooden Kitchen Utensil Set</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.6,999</span>
+                            <span class="old-price">Rs.4,999</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-11')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-11', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-11', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 12 -->
+                <div class="product-card" id="product-12" data-category="homeliving" data-price="4500">
+                    <img src="../Pictures/living basket.jfif" alt="">
+                    <div class="product-info">
+                        <h3>Rattan / Wicker Vanity Makeup Storage Basket with Oval Mirror</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.4,500</span>
+                            <span class="old-price">Rs.3,200</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-12')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-12', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-12', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 13 -->
+                <div class="product-card" id="product-13" data-category="beauty" data-price="599">
+                    <img src="../Pictures/facewash.jpg" alt="">
+                    <div class="product-info">
+                        <h3>Brightening & Nourishing Rice Face Wash (100ml)</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.599</span>
+                            <span class="old-price">Rs.489</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-13')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-13', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-13', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 14 -->
+                <div class="product-card" id="product-14" data-category="beauty" data-price="5500">
+                    <img src="../Pictures/makeup.avif" alt="">
+                    <div class="product-info">
+                        <h3>All-in-One Glam Makeup Kit Bundle with Metallic Pouch</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.5,500</span>
+                            <span class="old-price">Rs.3,999</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-14')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-14', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-14', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 15 -->
+                <div class="product-card" id="product-15" data-category="kids" data-price="3800">
+                    <img src="../Pictures/car.jpg" alt="">
+                    <div class="product-info">
+                        <h3>Growsland Remote Control Racing Car (1/18 Scale)</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.3,800</span>
+                            <span class="old-price">Rs.2,999</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-15')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-15', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-15', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 16 -->
+                <div class="product-card" id="product-16" data-category="kids" data-price="6500">
+                    <img src="../Pictures/cycle.webp" alt="">
+                    <div class="product-info">
+                        <h3>Happy Baby Kids Tricycle Bicycle</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.6,500</span>
+                            <span class="old-price">Rs.4,999</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-16')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-16', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-16', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 17 -->
+                <div class="product-card" id="product-17" data-category="electronics" data-price="8500">
+                    <img src="../Pictures/headphone1.webp" alt="">
+                    <div class="product-info">
+                        <h3>Premium Wireless Over-Ear Bluetooth Headphones with ANC</h3>
+                        <p class="rating">★★★★★ <span>(4.8)</span></p>
+                        <div class="price-box">
+                            <span class="price">Rs.8,500</span>
+                            <span class="old-price">Rs.5,999</span>
+                        </div>
+                        <button class="add-to-cart-btn add-btn" onclick="addToCart('product-17')">Add to Cart</button>
+                        <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                            <button onclick="updateQty('product-17', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                            <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                            <button onclick="updateQty('product-17', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            
+    
+          <!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Column 1: About -->
+        <div class="footer-col footer-about">
+            <h3>SHOPZA</h3>
+            <p>Your one-stop destination for quality products and fast delivery.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="../About/about.html">About Us</a></li>
+                <li><a href="../Contact/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="footer-col footer-contact">
+            <h4>Contact Info</h4>
+            <p>Email: support@shopza.com</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 SHOPZA. All Rights Reserved.</p>
+    </div>
+</footer>
+   
+    
+<script src="script.js"></script>
+
+</body>

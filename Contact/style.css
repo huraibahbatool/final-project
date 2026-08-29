@@ -1,0 +1,301 @@
+/* --- Header & Logo Styling --- */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #0F2537;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+#logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f8f8;
+    letter-spacing: 1px;
+}
+
+/* --- Navbar & Links --- */
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #f6f6f7;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+    color: #3182ce;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #2d3748 !important;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #3182ce !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- Nav Actions (Search, Theme, Cart) --- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-box input {
+    padding: 6px 10px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.search-box button {
+    background: #edf2f7;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cart-link {
+    text-decoration: none;
+    background-color: #3182ce;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.cart-link:hover {
+    background-color: #2b6cb0;
+}
+/* --- Contact Page Styling --- */
+.contact-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-info, .contact-form-box {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info h3, .contact-form-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2d3748;
+}
+
+.contact-info p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item span {
+    font-size: 1.5rem;
+}
+
+.info-item p {
+    margin: 0;
+    color: #4a5568;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #4a5568;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #3182ce;
+}
+
+.submit-btn {
+    background-color: #3182ce;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #2b6cb0;
+}
+/* Footer Section Styling */
+.footer {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 40px 8% 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-about, .footer-links, .footer-contact {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-about h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #38bdf8;
+}
+
+.footer-about p {
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.footer-links h4, .footer-contact h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #38bdf8;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-contact p {
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+  color: #64748b;
+  font-size: 14px;
+}

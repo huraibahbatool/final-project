@@ -1,0 +1,266 @@
+<! DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Online Shopping Website</title>
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <div id="header">
+        <div class="logo-container"> <img src="./Pictures/logo1.jpg" alt="" width="50px" height="50px">
+         <h3 id="logo-name">SHOPZA</h3>
+        </div>
+        <!-- Navbar Code -->
+<nav class="navbar">
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+<a href="shop/shop.html">Shop</a>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Categories</a>
+            <div class="dropdown-content">
+                <a href="shop/shop.html?category=women">Women Fashion</a>
+<a href="shop/shop.html?category=men">Men Fashion</a>
+<a href="shop/shop.html?category=electronics">Electronics</a>
+<a href="shop/shop.html?category=home">Home and Living</a>
+<a href="shop/shop.html?category=beauty">Beauty</a>
+<a href="shop/shop.html?category=kids">Kids & Toys</a>
+            </div>
+        </div>
+
+        <a href="about/about.html">About Us</a>
+<a href="contact/contact.html">Contact Us</a>
+<a href="cart/cart.html">Cart</a>
+    </div>
+</nav>
+             
+            
+
+        <div class="nav-actions">
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button type="button">🔍</button>
+        </div>
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+        
+    </div>
+    </header>
+    <br>
+       <section class="hero-slider">
+        <div class="slide" style="background-image: url('Pictures/hero_image2.png');"></div>
+        <div class="slide" style="background-image: url('Pictures/slider.jfif');"></div>
+        
+        <div class="hero-content">
+            <h1>Welcome to SHOPZA</h1>
+            <p>Explore top trends in Fashion, Electronics, Beauty, Home & Toys.</p>
+            <a href="shop/shop.html" class="hero-btn">Shop Now</a>
+        </div>
+    </section>
+        <!-- Featured Categories Section -->
+<section class="categories-section">
+    <h2 class="section-title">Shop By Categories</h2>
+    <div class="categories-container">
+        
+        <div class="category-card">
+            <img src="Pictures/women fashion.webp" alt="">
+            <h3>Women's Fashion</h3>
+            <a href="shop/shop.html" class="cat-btn">Explore</a>
+        </div>
+
+        <div class="category-card">
+            <img src="./Pictures/men fashion.webp" alt="Men Fashion">
+            <h3>Men's Fashion</h3>
+            <a href="shop/shop.html" class="cat-btn">Explore</a>
+        </div>
+
+        <div class="category-card">
+            <img src="./Pictures/black-headphones-digital-device_53876-96805.png" alt="Electronics">
+            <h3>Electronics</h3>
+            <a href="shop/shop.html" class="cat-btn">Explore</a>
+        </div>
+
+        <div class="category-card">
+            <img src="./Pictures/home.webp" alt="Home and Living">
+            <h3>Home & Living</h3>
+            <a href="shop/shop.html" class="cat-btn">Explore</a>
+        </div>
+
+        <div class="category-card">
+            <img src="./Pictures/beauty2.png" alt="Beauty">
+            <h3>Beauty</h3>
+            <a href="shop/shop.html" class="cat-btn">Explore</a>
+        </div>
+
+        <div class="category-card">
+            <img src="./Pictures/kids and toys.jfif" alt="Kids & Toys">
+            <h3>Kids & Toys</h3>
+            <a href="shop/shop.html" class="cat-btn">Explore</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="products-section">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="products-container">
+        
+        <!-- Product Card 1 -->
+        <div class="product-card" id="product-1">
+            <img src="./Pictures/women kurti2.webp" alt="">
+            <div class="product-info">
+                <h3>Aesthetic Printed Lawn Shalwar Suit</h3>
+                <p class="rating">★★★★★ <span>(4.5)</span></p>
+                <div class="price-box">
+                    <span class="price">Rs.3,000</span>
+                    <span class="old-price">Rs.6,000</span>
+                </div>
+            </div>
+            <button class="add-to-cart-btn add-btn" onclick="addToCart('product-1')">Add to Cart</button>
+            <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                <button onclick="updateQty('product-1', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                <button onclick="updateQty('product-1', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+            </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card" id="product-2">
+            <img src="./Pictures/men jacket.jpg" alt="">
+            <div class="product-info">
+                <h3>Classic Slim-Fit Denim Jacket</h3>
+                <p class="rating">★★★★★ <span>(5.0)</span></p>
+                <div class="price-box">
+                    <span class="price">Rs.4,000</span>
+                    <span class="old-price">Rs.6,500</span>
+                </div>
+            </div>
+            <button class="add-to-cart-btn add-btn" onclick="addToCart('product-2')">Add to Cart</button>
+            <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                <button onclick="updateQty('product-2', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                <button onclick="updateQty('product-2', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+            </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card" id="product-3">
+            <img src="./Pictures/headphone.jfif" alt="">
+            <div class="product-info">
+                <h3>SonicBass Noise-Canceling Headphones</h3>
+                <p class="rating">★★★★☆ <span>(4.2)</span></p>
+                <div class="price-box">
+                    <span class="price">Rs.1,499</span>
+                    <span class="old-price">Rs.2,999</span>
+                </div>
+            </div>
+            <button class="add-to-cart-btn add-btn" onclick="addToCart('product-3')">Add to Cart</button>
+            <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                <button onclick="updateQty('product-3', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                <button onclick="updateQty('product-3', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+            </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card" id="product-4">
+            <img src="./Pictures/serum.jfif" alt="">
+            <div class="product-info">
+                <h3>GlowBotanica Vitamin C Serum</h3>
+                <p class="rating">★★★★★ <span>(4.7)</span></p>
+                <div class="price-box">
+                    <span class="price">Rs.999</span>
+                    <span class="old-price">Rs.1,899</span>
+                </div>
+            </div>
+            <button class="add-to-cart-btn add-btn" onclick="addToCart('product-4')">Add to Cart</button>
+            <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                <button onclick="updateQty('product-4', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                <button onclick="updateQty('product-4', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+            </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card" id="product-5">
+            <img src="./Pictures/magnet toy.jpg" alt="">
+            <div class="product-info">
+                <h3>WonderBlocks Magnetic Building Set</h3>
+                <p class="rating">★★★★★ <span>(4.9)</span></p>
+                <div class="price-box">
+                    <span class="price">Rs.3,800</span>
+                    <span class="old-price">Rs.4,950</span>
+                </div>
+            </div>
+            <button class="add-to-cart-btn add-btn" onclick="addToCart('product-5')">Add to Cart</button>
+            <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                <button onclick="updateQty('product-5', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                <button onclick="updateQty('product-5', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+            </div>
+        </div>
+
+        <!-- Product Card 6 (Bed / Home Living) -->
+        <div class="product-card" id="product-6">
+            <img src="./Pictures/bed.webp" alt="">
+            <div class="product-info">
+                <h3>RoyalVelvet Quilted King Bedspread Set</h3>
+                <p class="rating">★★★★★ <span>(4.8)</span></p>
+                <div class="price-box">
+                    <span class="price">Rs.9,950</span>
+                    <span class="old-price">Rs.14,000</span>
+                </div>
+            </div>
+            <button class="add-to-cart-btn add-btn" onclick="addToCart('product-6')">Add to Cart</button>
+            <div class="counter-control" style="display: none; align-items: center; justify-content: space-between; background: #0f2537; border-radius: 8px; padding: 5px 10px; margin-top: 10px;">
+                <button onclick="updateQty('product-6', -1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">-</button>
+                <span class="qty" style="font-weight: bold; font-size: 16px; color: #fff;">1</span>
+                <button onclick="updateQty('product-6', 1)" style="background: none; border: none; color: #fff; font-size: 18px; cursor: pointer;">+</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="promo-banner">
+    <div class="promo-content">
+        <h2>Special Summer Sale!</h2>
+        <br>
+        <p>Get up to 50% OFF on all new arrivals. Limited time offer.</p>
+        <a href="shop/shop.html" class="promo-btn">Explore Collection</a>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>SHOPZA</h3>
+            <p>Your one-stop destination for quality products and fast delivery.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+<li><a href="shop/shop.html">Shop</a></li>
+<li><a href="about/about.html">About Us</a></li>
+<li><a href="contact/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p>Email: support@shopza.com</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 SHOPZA. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cart-SHOPZA</title>
+        <link rel="stylesheet" href="style.css">
+          </head>
+        <body>
+            <header>
+        <div id="header">
+        <div class="logo-container"> <img src="../Pictures/logo1.jpg" alt="" width="50px" height="50px"> 
+         <h3 id="logo-name">SHOPZA</h3>
+        </div>
+        <!-- Navbar Code -->
+<nav class="navbar">
+   <div class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="../shop/shop.html">Shop</a>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown">
+        <a href="#" class="dropbtn">Categories</a>
+        <div class="dropdown-content">
+            <a href="../shop/shop.html?category=women">Women Fashion</a>
+            <a href="../shop/shop.html?category=men">Men Fashion</a>
+            <a href="../shop/shop.html?category=electronics">Electronics</a>
+            <a href="../shop/shop.html?category=home">Home and Living</a>
+            <a href="../shop/shop.html?category=beauty">Beauty</a>
+            <a href="../shop/shop.html?category=kids">Kids & Toys</a>
+        </div>
+    </div>
+
+    <a href="../about/about.html">About Us</a>
+    <a href="../contact/contact.html">Contact Us</a>
+    <a href="cart.html">Cart</a>
+</div>
+</nav>
+             
+            
+
+        <div class="nav-actions">
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button type="button">🔍</button>
+        </div>
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+        <a href="cart.html" class="cart-link">🛒 Cart</a>
+    </div>
+    </header>
+    <br>
+    <!-- Page Header -->
+    <section class="page-header">
+        <center>
+            <h2>Your Shopping Cart</h2>
+            <p>Review your selected items before proceeding to checkout</p>
+        </center>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-container">
+        <div class="cart-grid">
+            
+            <!-- Cart Items List -->
+            <div class="cart-items">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="cart-product-info">
+                                    <img src="../Pictures/women kurti2.webp" alt="" width="60px">
+                                    <span>Aesthetic Printed Lawn Shalwar Suit</span>
+                                </div>
+                            </td>
+                            <td>Rs.3,000</td>
+                            <td><input type="number" value="1" min="1"></td>
+                            <td>Rs.3,000</td>
+                            <td><button class="remove-btn">X</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cart-product-info">
+                                    <img src="../Pictures/men jacket.jpg" alt="" width="60px">
+                                    <span>Classic Slim-Fit Denim Jacket</span>
+                                </div>
+                            </td>
+                            <td>Rs.4,000</td>
+                            <td><input type="number" value="1" min="1"></td>
+                            <td>Rs.4,000</td>
+                            <td><button class="remove-btn">X</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cart Summary / Total Box -->
+            <div class="cart-summary">
+                <h3>Cart Totals</h3>
+                <hr>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>Rs.7,000</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <hr>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>Rs.7,000</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>SHOPZA</h3>
+            <p>Your one-stop destination for quality products and fast delivery.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+               <li><a href="../index.html">Home</a></li>
+<li><a href="../shop/shop.html">Shop</a></li>
+<li><a href="../about/about.html">About Us</a></li>
+<li><a href="../contact/contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p>Email: support@shopza.com</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 SHOPZA. All Rights Reserved.</p>
+    </div>
+</footer>
