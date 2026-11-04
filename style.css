@@ -580,3 +580,179 @@ header img, .navbar img, .logo img {
     line-height: 1.3 !important;
   }
 }
+
+/* ===== SHOPZA RESPONSIVE MOBILE FIX ===== */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Header */
+    header,
+    #header {
+        width: 100%;
+        height: auto !important;
+        min-height: auto;
+        padding: 12px !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        overflow: visible !important;
+        gap: 12px;
+    }
+
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Navigation */
+    .navbar,
+    nav {
+        width: 100%;
+        justify-content: center;
+        overflow: visible !important;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap !important;
+        justify-content: center;
+        gap: 8px !important;
+        overflow: visible !important;
+        white-space: normal !important;
+    }
+
+    .nav-links a {
+        font-size: 13px !important;
+        padding: 6px !important;
+    }
+
+    /* Search Bar */
+    .nav-actions {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-box {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .search-box input {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Hero Section */
+    .hero-slider {
+        height: 55vh;
+        min-height: 300px;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    /* Categories */
+    .categories-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .category-card {
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .category-card img {
+        width: 100%;
+        height: 160px;
+    }
+
+    .category-card h3 {
+        font-size: 14px;
+    }
+
+    /* Products */
+    .products-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .product-card {
+        min-width: 0;
+        padding: 10px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 130px;
+    }
+
+    .product-info {
+        padding: 8px 0;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .old-price {
+        font-size: 12px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Small Mobile Screens */
+
+@media screen and (max-width: 480px) {
+
+    #logo-name {
+        font-size: 21px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .categories-section,
+    .products-section {
+        padding: 25px 3%;
+    }
+
+    .category-card img {
+        height: 130px;
+    }
+
+    .product-card img {
+        height: 115px;
+    }
+
+    .promo-content h2 {
+        font-size: 21px;
+    }
+
+}
+
