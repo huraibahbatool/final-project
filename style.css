@@ -533,6 +533,46 @@ body.dark-mode .product-card {
 body.dark-mode .product-info h3 {
     color: #f3f4f6;
 }
+/* --- MOBILE RESPONSIVE FIX FOR SHOPZA --- */
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile ke liye */
+@media only screen and (max-width: 768px) {
+  /* Banner text chota ho jaye */
+  h1, h2 {
+    font-size: 22px !important;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  /* Banner images */
+  .banner, .hero, .category-card {
+    width: 100% !important;
+    margin: 10px 0 !important;
+  }
+
+  /* Navbar mobile par hamburger banao */
+  nav, .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  /* Shop By Categories - 1 line me 1 image */
+  .categories-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px;
+  }
+}
 
 body.dark-mode .section-title {
     color: #f3f4f6;
